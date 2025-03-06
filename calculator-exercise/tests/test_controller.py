@@ -1,5 +1,10 @@
 def test_returnSignal(controller):
-    """Tests the Return key binding interface to our Qt display widget."""
+    """Tests the Return key binding interface to our Qt display widget.
+
+    pyqt event should call self._calculateResult.       
+    self._view.display.returnPressed.connect(self._calculateResult)
+
+    """
     from PyQt5 import QtCore, QtGui
 
     controller._view.setDisplayText("1+2")
