@@ -8,3 +8,7 @@ def test_returnSignal(controller):
     )
     controller._view.display.keyPressEvent(event)
     assert controller._view.displayText() == "3"
+
+
+def test_modelEval(model):
+    assert model("1+2") == "3"
