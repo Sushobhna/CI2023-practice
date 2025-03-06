@@ -6,6 +6,8 @@ from pycalc.constants import *
 
 # Main calculator controller class
 # Connects the view (GUI) with the model (business logic)
+
+
 class PyCalcCtrl:
     """
     Main calculator controller class.
@@ -57,7 +59,7 @@ class PyCalcCtrl:
             None
         """
 
-        result = self._evaluate(expression=self._view.displayText() + "1")
+        result = self._evaluate(expression=self._view.displayText())
         self._view.setDisplayText(result)
 
     def _buildExpression(self, sub_exp):
